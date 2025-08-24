@@ -23,10 +23,16 @@
     "preshow:coverage": "npm run coverage",
     "show:coverage": "live-server coverage/lcov-report",
     "preshow:dist": "npm run build",
-    "show:dist": "http-server dist"
+    "show:dist": "http-server dist",
+    "start:server": "node server/server.js"
   },
   "dependencies": {
-    "core-js": "^3.38.1"
+    "core-js": "^3.38.1",
+    "body-parser": "1.20.2",
+    "cors": "2.8.5",
+    "express": "4.21.0",
+    "pino": "8.17.2",
+    "pino-pretty": "10.3.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.24.1",
