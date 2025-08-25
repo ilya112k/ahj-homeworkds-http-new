@@ -5,6 +5,9 @@
 body {
   height: 100vh;
   width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .modal {
   background-color: rgba(0, 0, 0, 0.47);
@@ -18,6 +21,52 @@ body {
   right: 0;
   width: 100vw;
   height: 100vh;
+}
+.ticket-list {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.ticket-add {
+  border: 1px solid;
+  padding: 10px 20px;
+  border-radius: 10px;
+  align-self: flex-end;
+  cursor: pointer;
+}
+.single-ticket .wrapper {
+  display: flex;
+  gap: 20px;
+}
+.ticket-cancel,
+.ticket-submit,
+.single-ticket .delete,
+.single-ticket .edit {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.single-ticket {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  border-radius: 10px;
+  border: 1px solid;
+  margin: 10px;
+  padding: 20px;
+}
+.container {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .modal.hide {
   display: none;

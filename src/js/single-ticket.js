@@ -1,4 +1,5 @@
 import { BaseAPI } from "./api/api";
+import {Img} from "./img";
 
 class SingleTicket {
   constructor() {}
@@ -35,6 +36,9 @@ class SingleTicket {
       second: "2-digit",
     });
 
+    const wrapper = document.createElement("div");
+    wrapper.classList.add('wrapper');
+
     const deleteElement = document.createElement("button");
     deleteElement.classList.add("delete");
     deleteElement.textContent = "Удалить";
@@ -53,12 +57,15 @@ class SingleTicket {
       modal.updateForm({id, name, description, status, created: createAt});
     });
 
+    wrapper.append(
+      editElement,
+      deleteElement,
+    )
     element.append(
       statusElement,
       nameElement,
       dateElement,
-      editElement,
-      deleteElement,
+      wrapper
     );
     element.dataset.id = id;
     element.dataset.name = name;
