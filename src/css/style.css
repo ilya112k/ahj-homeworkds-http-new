@@ -75,6 +75,10 @@ body {
 .single-ticket_status {
   grid-area: status;
 }
+.single-ticket_name,
+.single-ticket_date {
+  cursor: pointer;
+}
 .single-ticket_name {
   grid-area: name;
 }
