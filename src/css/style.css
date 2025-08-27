@@ -35,7 +35,7 @@ body {
   align-self: flex-end;
   cursor: pointer;
 }
-.single-ticket .wrapper {
+.single-ticket_wrapper {
   display: flex;
   gap: 20px;
 }
@@ -50,15 +50,42 @@ body {
   cursor: pointer;
   text-transform: uppercase;
 }
+.single-ticket_description {
+  display: none;
+}
 .single-ticket {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 20px 1fr 110px 100px;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    'status name date wrapper'
+    'description description description description';
   gap: 20px;
   border-radius: 10px;
   border: 1px solid;
   margin: 10px;
   padding: 20px;
+}
+.single-ticket.active {
+  grid-template-rows: 1fr 1fr;
+}
+.single-ticket.active .single-ticket_description {
+  display: flex;
+}
+.single-ticket_status {
+  grid-area: status;
+}
+.single-ticket_name {
+  grid-area: name;
+}
+.single-ticket_date {
+  grid-area: date;
+}
+.single-ticket_wrapper {
+  grid-area: wrapper;
+}
+.single-ticket_description {
+  grid-area: description;
 }
 .container {
   max-width: 600px;

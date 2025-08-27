@@ -1,8 +1,8 @@
 import {BaseAPI} from "./api/api";
 
-class Modal {
+class TicketModal {
   constructor() {
-    this.element = document.querySelector('.modal');
+    this.element = document.querySelector('#ticket-modal');
     this.form = {};
     this.form.id = this.element.querySelector('.ticket-id');
     this.form.name = this.element.querySelector('.ticket-name');
@@ -77,4 +77,4 @@ class Modal {
     this.form.created.value = Date.now()
   }
 }
-export { Modal }
+export { TicketModal }
