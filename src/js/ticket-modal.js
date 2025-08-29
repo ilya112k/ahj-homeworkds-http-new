@@ -35,10 +35,10 @@ class TicketModal {
       id: this.form.id.value,
       name: this.form.name.value,
       description: this.form.description.value,
-      status: this.form.status.value,
-      created: this.form.created.value,
+      status: this.form.status.value === "true",
+      created: +this.form.created.value,
     };
-    
+
     if (!result.id) {
       await BaseAPI.create(result);
       this.closeAction();
