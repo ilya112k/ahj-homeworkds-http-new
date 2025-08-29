@@ -34,7 +34,7 @@ class SingleTicket {
     });
     const dateElement = document.createElement("div");
     dateElement.classList.add("single-ticket_date");
-    dateElement.textContent = new Date(createAt).toLocaleDateString("en-EN", {
+    dateElement.textContent = new Date(createAt).toLocaleDateString("ru-RU", {
       month: "2-digit",
       year: "2-digit",
       day: "2-digit",
