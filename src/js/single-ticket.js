@@ -23,6 +23,7 @@ class SingleTicket {
         created: createAt,
         status: !status,
       });
+      status = !status;
     });
 
     const nameElement = document.createElement("div");
@@ -39,7 +40,7 @@ class SingleTicket {
       year: "2-digit",
       day: "2-digit",
       minute: "2-digit",
-      second: "2-digit",
+      hour: "2-digit",
     });
     dateElement.addEventListener('click', (e) => {
       e.preventDefault();
